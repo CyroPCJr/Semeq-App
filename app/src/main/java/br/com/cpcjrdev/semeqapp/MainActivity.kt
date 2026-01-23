@@ -8,7 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
-import br.com.cpcjrdev.semeqapp.ui.presentation.login.LoginScreenRoot
+import br.com.cpcjrdev.semeqapp.presentation.navigation.NavigationRoot
 import br.com.cpcjrdev.semeqapp.ui.theme.SemeqAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -18,7 +18,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             SemeqAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    LoginScreenRoot(modifier = Modifier.padding(innerPadding))
+                    NavigationRoot(modifier = Modifier.padding(innerPadding))
                 }
             }
         }

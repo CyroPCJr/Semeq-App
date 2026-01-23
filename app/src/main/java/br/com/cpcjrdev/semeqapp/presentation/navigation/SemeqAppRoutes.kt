@@ -1,8 +1,10 @@
-package br.com.cpcjrdev.semeqapp.ui.presentation.navigation
+package br.com.cpcjrdev.semeqapp.presentation.navigation
 
+import androidx.navigation3.runtime.NavKey
 import kotlinx.serialization.Serializable
 
-sealed interface SemeqAppRoutes {
+@Serializable
+sealed interface SemeqAppRoutes : NavKey {
     @Serializable
     data object Login : SemeqAppRoutes
 
