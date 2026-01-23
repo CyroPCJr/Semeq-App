@@ -23,6 +23,7 @@ output-metadata.json
 # IntelliJ
 *.iml
 .idea/
+*.db
 # The following lines prevent committing user-specific files within .idea
 !.idea/workspace.xml
 !.idea/tasks.xml
@@ -49,3 +50,4 @@ google-services.json
 
 # Kotlin Gradle plugin data, see https://kotlinlang.org/docs/whatsnew20.html#new-directory-for-kotlin-data-in-gradle-projects
 .kotlin/
+/.idea
