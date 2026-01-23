@@ -1,4 +1,4 @@
-package br.com.cpcjrdev.semeqapp.ui.presentation.login
+package br.com.cpcjrdev.semeqapp.presentation.login
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -42,14 +42,17 @@ import br.com.cpcjrdev.semeqapp.ui.theme.PrimaryPink
 import br.com.cpcjrdev.semeqapp.ui.theme.SemeqAppTheme
 
 @Composable
-fun LoginScreenRoot(modifier: Modifier = Modifier) {
-    LoginScreen(modifier = modifier)
+fun LoginScreenRoot(
+    modifier: Modifier = Modifier,
+    onLoginClick: (String) -> Unit = {},
+) {
+    LoginScreen(modifier = modifier, onLoginClick = onLoginClick)
 }
 
 @Composable
 fun LoginScreen(
     modifier: Modifier = Modifier,
-    onLoginClick: () -> Unit = {},
+    onLoginClick: (String) -> Unit,
 ) {
     val scrollState = rememberScrollState()
     Column(
@@ -100,7 +103,7 @@ fun LoginScreen(
 @Composable
 private fun LoginContent(
     modifier: Modifier,
-    onLoginClick: () -> Unit,
+    onLoginClick: (String) -> Unit,
 ) {
     var username by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
@@ -137,7 +140,7 @@ private fun LoginContent(
         Spacer(modifier = Modifier.height(32.dp))
 
         Button(
-            onClick = onLoginClick,
+            onClick = { onLoginClick(username) },
             modifier =
                 Modifier
                     .fillMaxWidth()
@@ -149,7 +152,7 @@ private fun LoginContent(
                 ),
         ) {
             Text(
-                text = "Login",
+                text = stringResource(R.string.login),
                 color = Color.White,
                 fontWeight = FontWeight.Bold,
             )
@@ -203,6 +206,6 @@ private fun CustomTextField(
 @Composable
 private fun LoginScreenPreview() {
     SemeqAppTheme {
-        LoginScreen()
+        LoginScreen(onLoginClick = {})
     }
 }
