@@ -1,15 +1,51 @@
-*.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+# Gradle files
+.gradle/
+build/
+
+# Local configuration file (sdk path, etc)
 local.properties
+
+# Log/OS Files
+*.log
+
+# Android Studio generated files and folders
+captures/
+.externalNativeBuild/
+.cxx/
+*.aab
+*.apk
+output-metadata.json
+
+
+# Android Studio Navigation editor temp files
+.navigation/
+
+# IntelliJ
+*.iml
+.idea/
+# The following lines prevent committing user-specific files within .idea
+!.idea/workspace.xml
+!.idea/tasks.xml
+!.idea/libraries/
+# !.idea/gradle.xml # Comment this line out if your team wants to share Gradle settings
+!.idea/assetWizardSettings.xml
+!.idea/dictionaries/
+!.idea/caches/
+!.idea/modules.xml
+!.idea/render.experimental.xml
+!.idea/deploymentTargetDropDown.xml
+# Comment next line if keeping position of elements in Navigation Editor is relevant for you.
+!.idea/navEditor.xml
+
+# Keystore files
+*.jks
+*.keystore
+
+# Google Services (e.g. APIs or Firebase)
+google-services.json
+
+# Android Profiling
+*.hprof
+
+# Kotlin Gradle plugin data, see https://kotlinlang.org/docs/whatsnew20.html#new-directory-for-kotlin-data-in-gradle-projects
+.kotlin/
