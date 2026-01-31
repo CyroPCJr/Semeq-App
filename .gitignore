@@ -16,29 +16,12 @@ captures/
 *.apk
 output-metadata.json
 
-
-# Android Studio Navigation editor temp files
-.navigation/
-
 # IntelliJ
 *.iml
 .idea/
-!.idea/misc.xml
-*.db
-.idea/firebender
-# The following lines prevent committing user-specific files within .idea
-!.idea/workspace.xml
-!.idea/tasks.xml
-!.idea/libraries/
-# !.idea/gradle.xml # Comment this line out if your team wants to share Gradle settings
-!.idea/assetWizardSettings.xml
-!.idea/dictionaries/
-!.idea/caches/
-!.idea/modules.xml
-!.idea/render.experimental.xml
-!.idea/deploymentTargetDropDown.xml
-# Comment next line if keeping position of elements in Navigation Editor is relevant for you.
-!.idea/navEditor.xml
+misc.xml
+deploymentTargetDropDown.xml
+render.experimental.xml
 
 # Keystore files
 *.jks
@@ -50,5 +33,4 @@ google-services.json
 # Android Profiling
 *.hprof
 
-# Kotlin Gradle plugin data, see https://kotlinlang.org/docs/whatsnew20.html#new-directory-for-kotlin-data-in-gradle-projects
-.kotlin/
+.kotlin
